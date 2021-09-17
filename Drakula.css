@@ -1,7 +1,5 @@
 /* Dracula theme + modifications C69 made */
-
-/* Fira Code font itself */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+/* And modifications from PoorPocketsMcNewHold. Mainly, removing every non-coloring stuff, to prevent the Alexis Modern Theme to be broken*/
 
 
 :root {
@@ -55,8 +53,7 @@
 
 .theme-dark .scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG::-webkit-scrollbar-track-piece {
   background-color: var(--dracula-selection) !important;
-  border: 4px solid var(--dracula-background) !important;
-  border-radius: 8px !important;
+  border: var(--dracula-background) !important;
 }
 
 /* Syntax Highlighing in Code Blocks*/
@@ -95,10 +92,6 @@ span.hljs-meta-string {
 }
 
 /* Extra Shizz */
-
-* {
-  font-family: "Fira Code" !important;
-}
 
 .unread-1xRYoj {
 	color: var(--dracula-green);
@@ -141,10 +134,6 @@ span.hljs-meta-string {
   color: var(--dracula-purple);
 }
 
-.username-1A8OIy, .roleColor-rz2vM0 {
-  filter: brightness(100%);
-}
-
 /* Status Colours (thanks DoggyBootsy for making it) */
 
 [mask^="url(#svg-mask-status-online"] {
@@ -178,41 +167,8 @@ IDFK what is this but meh:
 */
 
 /* Status Scrollbar by Mackenzie */
-.root-SR8cQa .activity-1ythUs {
-  overflow: auto;
-}
-.root-SR8cQa .activity-1ythUs::-webkit-scrollbar {
-  height: 5px;
-}
-.root-SR8cQa .activity-1ythUs::-webkit-scrollbar-track {
-  border-radius: 4px;
-  margin-left: 18px;
-  margin-right: 18px;
-  background-color: rgba(0, 0, 0, 0.15);
-}
-.root-SR8cQa .activity-1ythUs::-webkit-scrollbar-thumb {
-  border-radius: 4px;
+{
   background-color: var(--header-secondary);
-}
-
-/* Remove the text from the server popup (say Server Boost, Server Settings, etc) by Doggyboostsy */
-#guild-header-popout {
-  width: fit-content;
-}
-#guild-header-popout .scroller-3BxosC, #guild-header-popout [role="group"] {
-  display: flex;
-  flex-direction: row;
-  -webkit-box-orient: horizontal;
-}
-#guild-header-popout .scroller-3BxosC .item-1tOPte, #guild-header-popout [role="group"] .item-1tOPte {
-  width: 32px;
-}
-#guild-header-popout .scroller-3BxosC .iconContainer-2-XQPY, #guild-header-popout [role="group"] .iconContainer-2-XQPY {
-  margin: 0;
-  transform: translate(-1px,0);
-}
-#guild-header-popout .scroller-3BxosC .label-22pbtT, #guild-header-popout [role="group"] .label-22pbtT {
-  display: none;
 }
 
 /* Replace the black/gray colour of popups by KayoticCarnige and colour changed by C69 */
@@ -230,8 +186,6 @@ IDFK what is this but meh:
 }
 /* Cooler message buttons by Mackenzie */
 .message-2qnXI6 .wrapper-2aW0bm .button-1ZiXG9 {
-  margin: 0 2px;
-  border-radius: 5px;
   background-color: var(--background-tertiary);
 }
 
@@ -242,10 +196,7 @@ IDFK what is this but meh:
 /* Mute icon + text in servers that you're muted by Pukima */
 .muteText-gutGxh {
   color:var(--dracula-red);
-  margin-top: 3px;
-  margin-left: 1.5px;
   background: url('https://svgur.com/i/W9K.svg') no-repeat;
-  background-size: 23px;
 }
 
 .muteText-gutGxh::before {
@@ -253,136 +204,25 @@ IDFK what is this but meh:
 }
 
 /* Modern Profile Pop-ups by andr0id*/
-.protip-YaFfgO {
-  display: none;
-}
-.headerText-2sdzFM {
-  display: block;
-  position: relative;
-  left: 50px;
-  bottom: 65px;
-  max-height: 0px;
-  max-width: 125px;
-}
-.avatarWrapper-3H_478 {
-  right: 65px;
-  padding: 2px;
-}
-.headerTagWithNickname-3IthZD {
-  max-width: 115px;
-}
+
 .px-10SIf7.botTag-2WPJ74{
   background-color: rgba(255, 255, 255, 0.438);
 }
-.customStatus-1bh2V9{
-  margin-top: 0px !important;
-}
-.avatarHint-1qgaV3 {
-  right: 65px;
-  padding: 2px;
-}
+
 /* Cooler Mentions by andr0id*/
 .wrapper-3WhCwL {
   color: white;
   background-color: #2b2b2b;
-  padding-left: 6px;
-  padding-right: 6px;
-  transition: 0.5s;
 }
 .wrapper-3WhCwL:hover {
   background-color: #0f0f0f;
-  transition: 0.5s;
 }
 
-/* Resizing the Emoji and making it large */
-.emojiSection-3Fb9ix img {
-  margin: auto;
-  min-width: 80%;
-  height: auto !important;
-}
-/* Resizing the Emoji and making it large End */
 
-/* Text Wrapping */
-.emojiSection-3Fb9ix > .noWrap-3jynv6, .emojiSection-3Fb9ix{
-  flex: wrap;
-  flex-direction: column !important;
-}
-/* Text Wrapping End */
-
-/* Adjusting the text weight and aligning it to center */
-.emojiName-27Bjxw {
-  font-weight: 600;
-  margin-top: 8px;
-  text-align: center;
-}
-/* Adjusting the text weight and aligning it to center End */
-/* Show date of edits by DoggyBootsy */
-.cozyMessage-3V1Y8y:not(.systemMessage-1I9LCe) .markup-2BOw-j .timestampInline-yHQ6fX>[aria-label]::after{
-  content:"-(" attr(aria-label) ")";
-  font-size: 0.625rem;
-  font-weight: 400;
-  line-height: 1;
-}
-
-/* Make Emote preview thingys bigger by Awish */
-/* Resizing the Emoji and making it large */
-.emojiSection-3Fb9ix img {
-  margin: auto;
-  min-width: 80%;
-  height: auto !important;
-}
-/* Resizing the Emoji and making it large End */
-
-/* Text Wrapping */
-.emojiSection-3Fb9ix > .noWrap-3jynv6, .emojiSection-3Fb9ix{
-  flex: wrap;
-  flex-direction: column !important;
-}
-/* Text Wrapping End */
-
-/* Adjusting the text weight and aligning it to center */
-.emojiName-27Bjxw {
-  font-weight: 600;
-  margin-top: 8px;
-  text-align: center;
-}
-
-/* Remove inventory/nitro/stage text */
-#private-channels > [class*="content-"] {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-}
-#private-channels > [class*="content-"] > a:not([href*="/channels/@me/"]) {
-    flex-grow: 1;
-    margin-top: 8px !important;
-    margin-left: 0;
-}
-#private-channels > [class*="content-"] > a:not([href*="/channels/@me/"]):first-of-type {
-    margin-left: 8px !important;
-}
-#private-channels > [class*="content-"] > a:not([href*="/channels/@me/"]) [class*="layout-"] {
-    justify-content: center;
-    padding: 0 !important;
-}
-#private-channels > [class*="content-"] > a:not([href*="/channels/@me/"]) [class*="avatar-"] {
-    margin: 0 !important;
-}
-#private-channels > [class*="content-"] > a:not([href*="/channels/@me/"]) [class*="content-"] {
-    display: none;
-}
 #private-channels > [class*="content-"] > a:not([href*="/channels/@me/"]) [class*="children-"] {
-    position: absolute;
-    transform: translate(4px, 8px);
     box-shadow: 0 0 0 3px var(--background-secondary);
-    border-radius: 100px;
 }
-#private-channels > [class*="content-"] > h2 {
-    width: 100%;
-}
-#private-channels > [class*="content-"] > a[href*="/channels/@me/"] {
-    width: 100%;
-}
+
 
 /*http link as red*/
 
@@ -396,47 +236,13 @@ a[href^="https://"] {
   color: var(--dracula-green);
 }
 
-/* Scrollbar for Serverlist by KayoticCarnige */
-.none-2Eo-qx {
-  scrollbar-width: auto !important;
-  overflow-y: scroll !important;
-  overflow-x: hidden !important;
-  margin-right: 3px;
-}
-
-.none-2Eo-qx:hover::-webkit-scrollbar {
-  width: 0.25em !important;
-  border-radius: 25px;
-  height: 0px !important;
-  background: transparent !important;
-  
-}
-
 .none-2Eo-qx::-webkit-scrollbar-thumb {
   background: var(--background-accent);
-  border-radius: 25px;
 }
 
-/* Remove your phone number from settings by Mackenzie */
-.accountProfileCard-1XCH88 .field-1HUseB:last-child .size16-1P40sf {
-  --no-phone-number-text: 'Nothing to see here!';
-  color: transparent;
 }
 .accountProfileCard-1XCH88 .field-1HUseB:last-child .size16-1P40sf::before {
   color: var(--header-primary);
-  content: var(--no-phone-number-text, '1-800-SUSSY');
-}
-.accountProfileCard-1XCH88 .field-1HUseB:last-child .size16-1P40sf > .lookLink-9FtZy- {
-  transform: translateX(-88px);
-}
-
-/* fix that pesky activities bug by Davri */
-.assetsLargeMaskVoiceChannel-2k1oGM {-webkit-mask-size: cover;}
-
-/* Center the emoji the status while on profile by botato */
-.customStatus-oN4ZZY > .customStatusEmoji-3a2-Zo.customStatusSoloEmoji-1tDhmL:only-child {
-    margin-right: auto;
-    margin-left: auto;
 }
 
 /* make options colored and such */
@@ -504,128 +310,32 @@ a[href^="https://"] {
     color: #fff;
 }
 
-/* White badges (on hover) by... uhh... how do i put your name here? */
-/* doesn't work that well on goosemod tho */
-.clickable-17BDii:hover,
-.powercord-badge-wrapper:hover {
-    filter: brightness(500%) !important;
+.userPopout-xaxa6l {
+     background-color: var(--background-secondary-alt);
 }
 
-/* nebula user popout by heckbound */
-:root {
-     --primary-rounding: 5px;
-     --primary-spacing: 10px;
-     --secondary-spacing: 20px;
-     --secondary-rounding: 10px;
-}
- .userPopout-xaxa6l {
-     background-color: var(--background-secondary-alt);
-     border-radius: var(--primary-rounding);
-}
- .userPopout-xaxa6l .headerNormal-3KXFBt {
-     margin: var(--primary-spacing);
-     margin-bottom: 0 !important;
-}
- .userPopout-xaxa6l .headerNormal-3KXFBt .banner-2QYc2d {
+.userPopout-xaxa6l .headerNormal-3KXFBt .banner-2QYc2d {
      background-color: var(--background-secondary) !important;
-     border-radius: var(--primary-rounding);
-     height: 120px;
-     width: 100%;
 }
- .userPopout-xaxa6l .headerNormal-3KXFBt .bannerPremium-2hSAwz {
-     filter: brightness(0.3);
-}
- .userPopout-xaxa6l .avatarWrapper-3r9PdD {
-     left: var(--secondary-spacing);
-     top: var(--secondary-spacing);
-}
- .userPopout-xaxa6l .avatarWrapper-3r9PdD .avatar-37jOim {
-     background-color: transparent;
-     border-radius: var(--primary-rounding);
-     height: 99px !important;
-     width: 90px !important;
-     border: none;
-}
- .userPopout-xaxa6l .avatarWrapper-3r9PdD .avatar-37jOim .mask-1l8v16 foreignObject {
-     mask: none;
-}
- .userPopout-xaxa6l .avatarWrapper-3r9PdD .avatar-37jOim .mask-1l8v16 foreignObject .avatar-VxgULZ {
+
+.userPopout-xaxa6l .avatarWrapper-3r9PdD .avatar-37jOim .mask-1l8v16 foreignObject .avatar-VxgULZ {
      background-color: var(--background-primary);
-     border-radius: var(--primary-rounding);
 }
- .userPopout-xaxa6l .avatarWrapper-3r9PdD .avatar-37jOim .mask-1l8v16 .pointerEvents-2zdfdO {
-     user-select: none !important;
-     ry: var(--primary-rounding);
-     height: 16px !important;
-     width: 16px !important;
-     mask: none;
-     x: 60;
-     y: 60;
-}
- .userPopout-xaxa6l .avatarWrapper-3r9PdD .avatarHint-2A3RNb {
-     border-radius: var(--primary-rounding);
-     height: 99px;
-     width: 99px;
-     left: 0;
-     top: 0;
-}
- .userPopout-xaxa6l .avatarWrapper-3r9PdD .avatarHint-2A3RNb foreignObject {
-     mask: none;
-}
- .userPopout-xaxa6l .headerTop-3vNv-a {
-     padding: var(--secondary-spacing) 0 0 0;
-     right: var(--primary-spacing);
-     position: absolute;
-     height: 100px;
-     width: 171px;
-}
- .userPopout-xaxa6l .headerTop-3vNv-a .profileBadges-ohc0Vu {
-     right: var(--primary-spacing);
-     top: unset;
-     bottom: 0;
-}
- .userPopout-xaxa6l .headerTop-3vNv-a .headerText-1vVs-U {
-     padding-left: var(--primary-spacing);
-}
- .userPopout-xaxa6l .body-3HBlXn {
+
+.userPopout-xaxa6l .body-3HBlXn {
      background-color: var(--background-secondary);
-     border-radius: var(--primary-rounding);
-     margin: var(--primary-spacing);
-     max-height: 400px;
-     padding: 10px;
 }
  .userPopout-xaxa6l .body-3HBlXn .bodyInnerWrapper-26fQXj {
      background-color: var(--background-tertiary);
-     border-radius: var(--primary-rounding);
-     padding: 6px;
 }
  .userPopout-xaxa6l .footer-3UKYOU {
      background-color: var(--background-secondary);
-     border-radius: var(--primary-rounding);
-     margin: var(--primary-spacing);
-     margin-top: 0 !important;
-     padding: 16px;
 }
 
 /* extended user panel (looks amazing btw) by ADudeCalledLeo */
 /* the main bit! */
 .container-3baos1 {
-  position: fixed;
-  left: 4px;
-  top: calc(100% - 52px);
-  width: 292px;
   background-color: var(--background-tertiary);
-}
-
-/* PATCH for scrollers above the user panel to make space */
-.guilds-1SWlCJ, /* servers */
-.sidebar-2K8pFh /* channels */ {
-  height: calc(100% - 52px);
-}
-
-/* stops community server icons from shrinking on the emoji popouts by Davri */
-.guildSection-1EoFKd > .flex-1xMQg5 > svg {
-    flex-shrink: 0;
 }
 
 /* fix the friends list colours by c69 */
